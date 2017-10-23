@@ -3,13 +3,18 @@
 	<nodes>
 		<node id="0" name="File" position="(150, 150)" project_name="Orange3" qualified_name="Orange.widgets.data.owfile.OWFile" title="File" version="" />
 		<node id="1" name="Data Table" position="(247.0, 150.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owtable.OWDataTable" title="Data Table" version="" />
-		<node id="2" name="Polynomial Classification" position="(361.0, 150.0)" project_name="Orange3-Educational" qualified_name="orangecontrib.educational.widgets.owpolynomialclassification.OWPolynomialClassification" title="Polynomial Classification" version="" />
-		<node id="3" name="Data Table" position="(526.0, 149.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owtable.OWDataTable" title="Data Table (1)" version="" />
+		<node id="2" name="Polynomial Classification" position="(372.0, 139.0)" project_name="Orange3-Educational" qualified_name="orangecontrib.educational.widgets.owpolynomialclassification.OWPolynomialClassification" title="Polynomial Classification" version="" />
+		<node id="3" name="Data Table" position="(534.0, 134.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owtable.OWDataTable" title="Data Table (1)" version="" />
+		<node id="4" name="Scatter Plot" position="(364.0, 311.0)" project_name="Orange3" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" title="Scatter Plot" version="" />
+		<node id="5" name="Predictions" position="(538.0, 302.0)" project_name="Orange3" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" title="Predictions" version="" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="Data" sink_node_id="1" source_channel="Data" source_node_id="0" />
 		<link enabled="true" id="1" sink_channel="Data" sink_node_id="2" source_channel="Data" source_node_id="1" />
 		<link enabled="true" id="2" sink_channel="Data" sink_node_id="3" source_channel="Coefficients" source_node_id="2" />
+		<link enabled="true" id="3" sink_channel="Data" sink_node_id="4" source_channel="Data" source_node_id="1" />
+		<link enabled="true" id="4" sink_channel="Data" sink_node_id="5" source_channel="Data" source_node_id="1" />
+		<link enabled="true" id="5" sink_channel="Predictors" sink_node_id="5" source_channel="Model" source_node_id="2" />
 	</links>
 	<annotations>
 		<arrow end="(570.0, 120.0)" fill="#C1272D" id="0" start="(622.0, 91.0)" />
@@ -45,7 +50,7 @@ ZGdldEdlb21ldHJ5cSlDMgHZ0MsAAgAAAAABUgAAAHEAAAQqAAACzAAAAVIAAACHAAAEKgAAAswA
 AAAAAAAAAAUAcSpYCwAAAHNoZWV0X25hbWVzcSt9cSxYBgAAAHNvdXJjZXEtSwBYAwAAAHVybHEu
 aAtYDQAAAGRvbWFpbl9lZGl0b3JxL31xMFgLAAAAX192ZXJzaW9uX19xMUsBWBAAAABjb250ZXh0
 X3NldHRpbmdzcTJdcTMoY09yYW5nZS53aWRnZXRzLnNldHRpbmdzCkNvbnRleHQKcTQpgXE1fXE2
-KFgEAAAAdGltZXE3R0HWeEtN3tTtWAYAAAB2YWx1ZXNxOH1xOShYCQAAAHZhcmlhYmxlc3E6XXE7
+KFgEAAAAdGltZXE3R0HWeUt0Xn9WWAYAAAB2YWx1ZXNxOH1xOShYCQAAAHZhcmlhYmxlc3E6XXE7
 WAkAAAB4bHNfc2hlZXRxPGgLSv////+GcT1oL31xPmg6XXE/KF1xQChYBQAAAO+7v1YxcUFjT3Jh
 bmdlLmRhdGEudmFyaWFibGUKQ29udGludW91c1ZhcmlhYmxlCnFCSwBoC4hlXXFDKFgCAAAAVjJx
 RGhCSwBoC4hlXXFFKFgCAAAAVjNxRmhCSwBoC4hlXXFHKFgCAAAAVjRxSGhCSwBoC4hlXXFJKFgH
@@ -89,8 +94,8 @@ Y29sb3JfUkdCcQMoS9xL3EvcS/90cQRYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxBUMyAdnQywAC
 AAAAAADuAAAAigAABA0AAAKTAAAA7gAAAKAAAAQNAAACkwAAAAAAAAAABQBxBlgLAAAAc2VsZWN0
 X3Jvd3NxB4hYFQAAAHNob3dfYXR0cmlidXRlX2xhYmVsc3EIiFgSAAAAc2hvd19kaXN0cmlidXRp
 b25zcQmIWAsAAABfX3ZlcnNpb25fX3EKSwFYEAAAAGNvbnRleHRfc2V0dGluZ3NxC11xDChjT3Jh
-bmdlLndpZGdldHMuc2V0dGluZ3MKQ29udGV4dApxDSmBcQ59cQ8oWAQAAAB0aW1lcRBHQdZ4S04B
-7uFYBgAAAHZhbHVlc3ERfXESKFgNAAAAc2VsZWN0ZWRfY29sc3ETXXEUKEsASwFlWA0AAABzZWxl
+bmdlLndpZGdldHMuc2V0dGluZ3MKQ29udGV4dApxDSmBcQ59cQ8oWAQAAAB0aW1lcRBHQdZ5S3Tn
+5tFYBgAAAHZhbHVlc3ERfXESKFgNAAAAc2VsZWN0ZWRfY29sc3ETXXEUKEsASwFlWA0AAABzZWxl
 Y3RlZF9yb3dzcRVdcRYoSwBLAWVoCksBdVgKAAAAYXR0cmlidXRlc3EXfXEYKFgFAAAA77u/VjFx
 GUsCWAIAAABWMnEaSwJYAgAAAFYzcRtLAlgCAAAAVjRxHEsCWAcAAABHZW51aW5lcR1dcR4oWAEA
 AAAwcR9YAQAAADFxIGV1WAUAAABtZXRhc3EhfXEiWA4AAABvcmRlcmVkX2RvbWFpbnEjXXEkKGgZ
@@ -113,16 +118,36 @@ eGVkIGRlZmVjdHFlZVgSAAAAZGlhbWV0ZXIgbmFycm93aW5ncWZdcWcoaB9oIGV1aCF9cWhoI11x
 aShoQ0sChnFqaERLAYZxa2hISwGGcWxoTksChnFtaE9LAoZxbmhQSwGGcW9oUksBhnFwaFdLAoZx
 cWhYSwGGcXJoWksChnFzaFtLAYZxdGhgSwKGcXVoYUsBhnF2aGZLAYZxd2V1YmV1Lg==
 </properties>
-		<properties format="literal" node_id="2">{'attr_x': '\ufeffV1', 'attr_y': 'V2', 'auto_apply': True, 'contour_step': 0.10000000000000007, 'contours_enabled': True, 'degree': 3, 'learner_name': 'Polynomial Classification', 'legend_enabled': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00\xd7\x00\x00\x00\x17\x00\x00\x04+\x00\x00\x02A\x00\x00\x00\xd7\x00\x00\x00-\x00\x00\x04+\x00\x00\x02A\x00\x00\x00\x00\x00\x00\x00\x00\x05\x00', 'target_class': '0', '__version__': 1}</properties>
+		<properties format="literal" node_id="2">{'attr_x': '\ufeffV1', 'attr_y': 'V2', 'auto_apply': True, 'contour_step': 0.10000000000000007, 'contours_enabled': True, 'degree': 1, 'learner_name': 'Polynomial Classification', 'legend_enabled': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00\x89\x00\x00\x00\x17\x00\x00\x04+\x00\x00\x02\xac\x00\x00\x00\x89\x00\x00\x00-\x00\x00\x04+\x00\x00\x02\xac\x00\x00\x00\x00\x00\x00\x00\x00\x05\x00', 'target_class': '1', '__version__': 1}</properties>
 		<properties format="pickle" node_id="3">gAN9cQAoWAsAAABhdXRvX2NvbW1pdHEBiFgOAAAAY29sb3JfYnlfY2xhc3NxAohYDgAAAGRpc3Rf
 Y29sb3JfUkdCcQMoS9xL3EvcS/90cQRYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxBUMyAdnQywAC
 AAAAAAAnAAAAFwAAA0YAAAIgAAAAJwAAAC0AAANGAAACIAAAAAAAAAAABQBxBlgLAAAAc2VsZWN0
 X3Jvd3NxB4hYFQAAAHNob3dfYXR0cmlidXRlX2xhYmVsc3EIiFgSAAAAc2hvd19kaXN0cmlidXRp
 b25zcQmIWAsAAABfX3ZlcnNpb25fX3EKSwFYEAAAAGNvbnRleHRfc2V0dGluZ3NxC11xDGNPcmFu
-Z2Uud2lkZ2V0cy5zZXR0aW5ncwpDb250ZXh0CnENKYFxDn1xDyhYBAAAAHRpbWVxEEdB1nhLyxCQ
-4lgGAAAAdmFsdWVzcRF9cRIoWA0AAABzZWxlY3RlZF9jb2xzcRNdcRRYDQAAAHNlbGVjdGVkX3Jv
+Z2Uud2lkZ2V0cy5zZXR0aW5ncwpDb250ZXh0CnENKYFxDn1xDyhYBAAAAHRpbWVxEEdB1nlMEDrA
+7FgGAAAAdmFsdWVzcRF9cRIoWA0AAABzZWxlY3RlZF9jb2xzcRNdcRRYDQAAAHNlbGVjdGVkX3Jv
 d3NxFV1xFmgKSwF1WAoAAABhdHRyaWJ1dGVzcRd9cRhYBAAAAGNvZWZxGUsCc1gFAAAAbWV0YXNx
 Gn1xG1gOAAAAb3JkZXJlZF9kb21haW5xHF1xHWgZSwKGcR5hdWJhdS4=
 </properties>
+		<properties format="pickle" node_id="4">gAN9cQAoWAsAAABhdXRvX3NhbXBsZXEBiFgTAAAAYXV0b19zZW5kX3NlbGVjdGlvbnECiFgTAAAA
+c2F2ZWRXaWRnZXRHZW9tZXRyeXEDQzIB2dDLAAIAAAAAAIIAAAAXAAAEVAAAAxAAAACCAAAALQAA
+BFQAAAMQAAAAAAAAAAAFAHEEWA8AAABzZWxlY3Rpb25fZ3JvdXBxBU5YEQAAAHRvb2xiYXJfc2Vs
+ZWN0aW9ucQZLAFgFAAAAZ3JhcGhxB31xCChYCwAAAGFscGhhX3ZhbHVlcQlLgFgNAAAAY2xhc3Nf
+ZGVuc2l0eXEKiVgRAAAAaml0dGVyX2NvbnRpbnVvdXNxC4lYCwAAAGppdHRlcl9zaXplcQxLAFgT
+AAAAbGFiZWxfb25seV9zZWxlY3RlZHENiVgLAAAAcG9pbnRfd2lkdGhxDksKWAkAAABzaG93X2dy
+aWRxD4lYCwAAAHNob3dfbGVnZW5kcRCIWA0AAABzaG93X3JlZ19saW5lcRGIWBEAAAB0b29sdGlw
+X3Nob3dzX2FsbHESiHVYCwAAAF9fdmVyc2lvbl9fcRNLAlgQAAAAY29udGV4dF9zZXR0aW5nc3EU
+XXEVKGNPcmFuZ2Uud2lkZ2V0cy5zZXR0aW5ncwpDb250ZXh0CnEWKYFxF31xGChYBAAAAHRpbWVx
+GUdB1nlL5yXTBlgGAAAAdmFsdWVzcRp9cRsoWAYAAABhdHRyX3hxHFgFAAAA77u/VjFxHUtmhnEe
+WAYAAABhdHRyX3lxH1gCAAAAVjJxIEtmhnEhaAd9cSIoWAoAAABhdHRyX2NvbG9ycSNYBwAAAEdl
+bnVpbmVxJEtlhnElWAoAAABhdHRyX2xhYmVscSZOSv7///+GcSdYCgAAAGF0dHJfc2hhcGVxKE5K
+/v///4ZxKVgJAAAAYXR0cl9zaXplcSpOSv7///+GcSt1aBNLAnVYCgAAAGF0dHJpYnV0ZXNxLH1x
+LShoHUsCaCBLAlgCAAAAVjNxLksCWAIAAABWNHEvSwJoJEsBdVgFAAAAbWV0YXNxMH1xMVgIAAAA
+U2VsZWN0ZWRxMksBc1gOAAAAb3JkZXJlZF9kb21haW5xM11xNChoHUsChnE1aCBLAoZxNmguSwKG
+cTdoL0sChnE4aCRLAYZxOWgySwGGcTpldWJoFimBcTt9cTwoaBlHQdZ5S+VXVx1oGn1xPShoHGgd
+S2aGcT5oH2gkS2WGcT9oB31xQChoI2gkS2WGcUFoJk5K/v///4ZxQmgoTkr+////hnFDaCpOSv7/
+//+GcUR1aBNLAnVoLH1xRShoHUsCaCRLAXVoMH1xRmgzXXFHKGgdSwKGcUhoJEsBhnFJZXViZXUu
+</properties>
+		<properties format="literal" node_id="5">{'draw_dist': True, 'output_attrs': True, 'output_predictions': True, 'output_probabilities': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00\xcb\x00\x00\x00\xad\x00\x00\x03\x90\x00\x00\x02\x16\x00\x00\x00\xcb\x00\x00\x00\xc3\x00\x00\x03\x90\x00\x00\x02\x16\x00\x00\x00\x00\x00\x00\x00\x00\x05\x00', 'show_attrs': True, 'show_predictions': True, 'show_probabilities': True, '__version__': 1, 'context_settings': []}</properties>
 	</node_properties>
 </scheme>
